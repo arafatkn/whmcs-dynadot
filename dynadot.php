@@ -23,8 +23,8 @@ use Arafatkn\WhmcsDynadot\Dynadot;
 function dynadot_MetaData(): array
 {
     return [
-        'DisplayName' => 'Dynadot Registrar Module for WHMCS',
-        'APIVersion' => '1.1',
+        'DisplayName' => 'Dynadot Domain Registrar',
+        'APIVersion' => '3',
     ];
 }
 

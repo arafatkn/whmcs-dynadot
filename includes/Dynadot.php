@@ -50,12 +50,43 @@ class Dynadot
 
     /**
      * Register a new domain.
-     * @throws \Exception
      */
     public function register(): array
     {
         try {
             $this->call('register', [
+                'duration' => $this->params['regperiod'],
+            ]);
+
+            return $this->success();
+        } catch (\Exception $e) {
+            return $this->error($e);
+        }
+    }
+
+    /**
+     * Transfer a domain in site.
+     */
+    public function transfer(): array
+    {
+        try {
+            $this->call('transfer', [
+                'auth' => $this->params['eppcode'],
+            ]);
+
+            return $this->success();
+        } catch (\Exception $e) {
+            return $this->error($e);
+        }
+    }
+
+    /**
+     * Renew existing domain.
+     */
+    public function renew(): array
+    {
+        try {
+            $this->call('renew', [
                 'duration' => $this->params['regperiod'],
             ]);
 
