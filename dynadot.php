@@ -37,8 +37,9 @@ function dynadot_getConfigArray(): array
 {
     return [
         "api_key" => [
+            "FriendlyName" => "API v3 Key",
             "Type" => "text",
-            "Size" => "20",
+            "Size" => "25",
             "Description" => "Dynadot API v3 Key here."
         ]
     ];
