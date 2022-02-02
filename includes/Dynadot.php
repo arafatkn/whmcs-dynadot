@@ -305,6 +305,6 @@ class Dynadot
     public function log($action, $request, $response = null)
     {
         $action .= ' (' . $this->domain . ')';
-        logModuleCall('dynadot', $action, $request, $response, '', $this->params);
+        logModuleCall('dynadot', $action, $request, $response, [], []);
     }
 }
